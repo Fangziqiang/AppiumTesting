@@ -1,0 +1,215 @@
+找到元素后可以对元素进行的操作，例如上面讲的进一步定位元素
+
+xpath定位：
+表达式             描述
+/           从根节点选取
+//          从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置
+.           选取当前节点
+..          选取当前节点的父节点
+@           选取属性
+*           匹配任何元素节点
+@*          匹配任何属性节点
+node()      匹配任何类型的节点
+
+一、元素操作
+
+1.click()
+
+#点击操作也可以用tab实现点击操作
+driver.find_element_by_id("com.wuba.zhuanzhuan:id/ae8").click()
+
+2.clear()
+
+#清空输入框内容
+driver.find_element_by_id("com.wuba.zhuanzhuan:id/ij").clear()
+
+3.send(xx)
+
+#输入框内输入内容
+driver.find_element_by_id("com.wuba.zhuanzhuan:id/ij").send_keys("test content")
+
+4.text
+
+#获得元素的text内容
+print(driver.find_element_by_xpath(" //android.widget.LinearLayout[1]//xxx").text)
+
+
+二、触摸操作
+
+1.driver.tap([坐标]，持续点击时间)
+
+除了定位到元素的点击外，也可以通过tab实现坐标的点击 
+driver.tap(driver.tap([(216,1776)],2))
+
+2.TouchAction(driver)
+
+TouchAction对象包含（tab）、press（短按）、move_to（滑动到某个坐标）等方法
+
+通过TouchAction对象，添加tap、move_to等操作，然后perform()执行，可以实现解锁屏幕等功能
+
+规范中的可用事件有： 
+* 短按 (press) 
+* 释放 (release) 
+* 移动到 (moveTo) 
+* 点击 (tap) 
+* 等待 (wait) 
+* 长按 (longPress) 
+* 取消 (cancel) 
+* 执行 (perform)
+
+例如：一个多次滑屏的例子
+action=TouchAction(driver)
+action.press(x=220,y=700).move_to(x=840, y=700).move_to(x=220, y=1530).move_to(x=840, y=1530).release().perform()
+
+可以通过wait()等待操作
+
+3.MultiAction()//多点触控
+
+通过MultiAction().add()添加多个TouchAction操作，最后调用perform()一起执行这些操作
+
+action0 = TouchAction().tap(el)
+action1 = TouchAction().tap(el)
+MultiAction().add(action0).add(action1).perform()
+
+4.driver.swipe(x1, y1, x2, y2,duration)
+
+//从坐标(x1,x2)滑动到坐标(x2,y2)，duration非必填项，滑动时间
+
+（滑动的坐标不能超过屏幕的宽高） 
+可以通过【driver.get_window_size()】命令获得窗口高和宽，结果为{‘width’: 1080, ‘height’: 1776}
+
+一个鼠标向上下左右活动的例子如下：
+
+#获得屏幕大小宽和高
+def getSize(driver):
+    x = driver.get_window_size()['width']
+    y = driver.get_window_size()['height']
+    return (x, y)
+#屏幕向上滑动
+def swipeUp(driver,t=1000):
+    l = getSize(driver)
+    x1 = int(l[0] * 0.5)    #x坐标
+    y1 = int(l[1] * 0.75)   #起始y坐标
+    y2 = int(l[1] * 0.25)   #终点y坐标
+    driver.swipe(x1, y1, x1, y2,t)
+#屏幕向下滑动
+def swipeDown(driver,t=1000):
+    l = getSize(driver)
+    x1 = int(l[0] * 0.5)  #x坐标
+    y1 = int(l[1] * 0.25)   #起始y坐标
+    y2 = int(l[1] * 0.75)   #终点y坐标
+    driver.swipe(x1, y1, x1, y2,t)
+#屏幕向左滑动
+def swipLeft(driver,t):
+    l=getSize(driver)
+    x1=int(l[0]*0.75)
+    y1=int(l[1]*0.5)
+    x2=int(l[0]*0.05)
+    driver.swipe(x1,y1,x2,y1,t)
+#屏幕向右滑动
+def swipRight(driver,t=1000):
+    l=getSize(driver)
+    x1=int(l[0]*0.05)
+    y1=int(l[1]*0.5)
+    x2=int(l[0]*0.75)
+    driver.swipe(x1,y1,x2,y1,t)
+#调用向下滑动的方法
+swipeDown(driver)
+三、系统按键事件
+press_keycode(AndroidKeyCode)#发送按键事件
+例如：点击home键，home键的KeyCode是3
+    driver.press_keycode(3)
+键名                                          描述              键值
+KEYCODE_CALL            拨号键             5
+KEYCODE_ENDCALL         挂机键             6
+KEYCODE_HOME            按键Home    3
+KEYCODE_MENU            菜单键             82
+KEYCODE_BACK            返回键             4
+KEYCODE_SEARCH          搜索键             84
+KEYCODE_CAMERA          拍照键             27
+KEYCODE_FOCUS           拍照对焦键      80
+KEYCODE_POWER           电源键             26
+KEYCODE_NOTIFICATION    通知键             83
+KEYCODE_MUTE            话筒静音键      91
+KEYCODE_VOLUME_MUTE     扬声器静音键  164
+KEYCODE_VOLUME_UP       音量增加键      24
+KEYCODE_VOLUME_DOWN     音量减小键      25
+
+四、driver的一些比较重要操作
+四、driver的一些比较重要操作
+
+1.reset()
+    #重置app
+    #这时候driver会重置，相当于卸载重装应用。所以本地缓存会失效
+    driver.reset()
+
+2.start_activity(包名,activity名)
+例如：
+    #启动app的某一个activity
+    driver.start_activity("com.wuba.zhuanzhuan","./presentation.view.activity.LaunchActivity")
+
+启动一个activity，这个activity必须是AndroidManifest.xml中有intent-filter的activity
+
+<intent-filter>
+    <action android:name="android.intent.action.MAIN"/>
+    <category android:name="android.intent.category.LAUNCHER"/>
+</intent-filter>
+
+3.contexts
+    #获得所有contexts
+    driver.contexts
+    #结果如下：
+    ['NATIVE_APP', 'WEBVIEW_com.android.browser']
+
+NATIVE_APP：native的context
+WEBVIEW_com.android.browser：webview的context，存放html的容器
+
+4.current_context
+    #查看当前的context
+    driver.current_context
+
+5.switch_to.context(context名)
+    #切换context
+    driver.switch_to.context("WEBVIEW_com.wuba.zhuanzhuan")
+
+NATIVE时不能定位WEBVIEW的内容，在WEBVIEW的context时不能定位NATIVE的内容。 
+所以需要切换到对应的context中去进行操作
+
+6.setNetworkConnection(bitmask掩码)
+
+    #设置网络类型
+    #例如：设置网络类型为只开wifi
+    driver.set_network_connection(2)
+
+网络的bitmask掩码如下：
+值 (别名)          数据连接    Wifi连接      飞行模式
+0 (什么都没有)        0        0          0
+1 (飞行模式)          0        0          1
+2 (只有Wifi)         0        1          0
+4 (只有数据连接)      1        0          0
+6 (开启所有网络)      1        1          0
+
+7.scroll(起始元素，结束元素)
+    driver.scroll(origin_el,destination_el)
+
+8.获得当前页面的所有元素
+    driver.page_source
+
+这可以用来判断元素是否存在，例如（assert “发布成功” in driver.page_source）
+
+9.补充一些driver启动时可能用到的项
+
+其实这些在上一篇启动里都有介绍，但是有些可能大家没注意到的点再列一下。这些点也是我在测试中实际遇到的点
+
+autoLaunch ：Appium是否要自动启动或安装app，默认true 
+desired_caps[‘autoLaunch’] = ‘false’ 
+有的时候我不想让appium每次都启动app，想自己去启动activity，那这个项这时就可以起作用了
+
+noReset：在会话前是否重置app状态。默认是false 
+desired_caps[‘noReset’] = ‘true’
+
+newCommandTimeout：设置未接收到新命令的超时时间，默认60s 
+如果60s内没有接收到新命令，appium会自动断开连接，如果我需要很长时间做driver之外的操作，可能延长接收新命令的超时时间 
+desired_caps[“newCommandTimeout”]=1800
+
+

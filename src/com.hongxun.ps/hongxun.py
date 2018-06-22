@@ -52,8 +52,9 @@ class HelloWorld(unittest.TestCase):
             print u"找不到取消按钮"
         #向上滑动
         swipe_up(driver,200)
-        driver.lock(5)
-        driver.keyevent(26)
+        #锁定及唤醒屏幕
+        driver.lock(5)#5位时间秒
+        driver.keyevent(26)   
         
         guanjiaButton2 = driver.find_elements_by_class_name("android.widget.TextView")
         #判断标签名称是否为管家
@@ -77,7 +78,7 @@ class HelloWorld(unittest.TestCase):
         
         
         #实现列表滚动查找
-#         driver.scroll(origin_el, destination_el)
+        driver.scroll(origin_el, destination_el)
         
         
         
