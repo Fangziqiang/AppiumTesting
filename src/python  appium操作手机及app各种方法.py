@@ -20,7 +20,7 @@ driver.remove_app('xxxxxx')
 driver.shake()
 #关闭应用
 driver.close_app()
-#重置（等于卸载后重装）
+#重置（等于卸载后重装）放在程序最后一步执行
 driver.reset()
 #获取应用的字符串
 driver.app_strings
