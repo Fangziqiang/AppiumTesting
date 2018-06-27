@@ -1,0 +1,162 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>接口测试用例指导文档</title>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="5cpfrvkt63nhfrs6f344mk5oaq">接口测试用例指导文档</a>
+</h1>
+<div align="center" class="globalOverview">
+<img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E6%8C%87%E5%AF%BC%E6%96%87%E6%A1%A3_files/images/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E6%8C%87%E5%AF%BC%E6%96%87%E6%A1%A3.jpg"></div>
+<h2 class="topic">
+<a name="3644kn7tpqf6klkpf94u8r7q4q">功能点测试用例（单个测试用例）</a>
+</h2>
+<h3 class="topic">
+<a name="3b2ai7qr9uat9rv93h95g817u1">&nbsp;必输项</a>
+</h3>
+<h3 class="topic">
+<a name="0uuv2r96h5i8638vf662edhaee">&nbsp;&nbsp;1、必输项全部是正常值&mdash;&mdash;&mdash;&gt;&gt;成功</a>
+</h3>
+<h3 class="topic">
+<a name="7pqvl0kf9v1mn9var1802vbba5">&nbsp;&nbsp;2、取长度最长边界值&mdash;&mdash;&mdash;&gt;&gt;成功</a>
+</h3>
+<h3 class="topic">
+<a name="5gm11iiolv20skntlcae3hv8bq">&nbsp;&nbsp;3、取长度为最长值+1，其他参数值都是正常的&mdash;&mdash;&mdash;&gt;&gt;失败（字段需要进行临界值+1的逐个遍历）</a>
+</h3>
+<h3 class="topic">
+<a name="4m84lobt5umrgeltlpknpktu4o">&nbsp;&nbsp;4、输入类型判断，比如定义为int型，测试输入字母等字符类型&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h3 class="topic">
+<a name="202embr590e3bds01u2rp4j6km">&nbsp;&nbsp;5、必输项有其中一项不填，其他项都填写正常&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h3 class="topic">
+<a name="37i3o6hcje688b79pfqcqobn4u">&nbsp;&nbsp;6、输入值取空值或者空格&mdash;&mdash;&mdash;&gt;&gt;成功/失败（根据接口定义来验证）</a>
+</h3>
+<h3 class="topic">
+<a name="0iba0c3k86bnnf1adnl7oj1cr0">&nbsp;&nbsp;7、特殊字符输入判断，比如：. % "&lt;&gt; ? ! @ 等，或输入正常转义后的字符&mdash;&mdash;&mdash;&gt;&gt;成功/失败</a>
+</h3>
+<h3 class="topic">
+<a name="7k76u1mb96en4guh7v8a52jk2g">&nbsp;非必输项</a>
+</h3>
+<h3 class="topic">
+<a name="0iasudf0tbnkcsgbr2ru7bvssj">&nbsp;&nbsp;1、正常情况下，非必输项都有输入值，其他项都正常&mdash;&mdash;&mdash;&gt;&gt;成功</a>
+</h3>
+<h3 class="topic">
+<a name="58i35a6bl2l12pbkpapri8krai">&nbsp;&nbsp;2、非必输项都没有，其他项输入正常&mdash;&mdash;&mdash;&gt;&gt;成功</a>
+</h3>
+<h3 class="topic">
+<a name="2d4fmpgsfadmmn4pj3nl2bruka">&nbsp;&nbsp;3、正常必输项缺少+非必输项&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h2 class="topic">
+<a name="2lvi9le4sjud9ea2tfsjkqe4lc">流程测试用例（组合测试用例）</a>
+</h2>
+<h3 class="topic">
+<a name="3mbuumicdot5l3qb6a3e2mh2ee">&nbsp;1、建数据&mdash;&mdash;&gt;&gt;查数据&mdash;&mdash;&gt;&gt;修改数据&mdash;&mdash;&gt;&gt;删除数据【此为一个完整的测试流程】</a>
+</h3>
+<h3 class="topic">
+<a name="5do866kjvrognht3c1o5qv2uou">&nbsp;2、建数据&mdash;&mdash;&gt;&gt;查数据&mdash;&mdash;&gt;&gt;修改数据&mdash;&mdash;&gt;&gt;删除数据&mdash;&mdash;&gt;&gt;查数据&mdash;&mdash;&gt;&gt;建数据&mdash;&mdash;&gt;&gt;查数据&mdash;&mdash;&gt;&gt;修改数据&mdash;&mdash;&gt;&gt;删除数据【为确保操作和数据的正确性，需要重复两次该操作，即如上】</a>
+</h3>
+<h2 class="topic">
+<a name="320icmfbv8bv33prn3aore3tvu">测试执行时候，需注意的地方</a>
+</h2>
+<h3 class="topic">
+<a name="5uk2bqla0i41baf4fcoosod9c7">&nbsp;1、测试执行时候可以围绕一套数据进行，比如新建一个用户，与该用户相关的个人基本信息、教育经历、工作经历、生活经历等都可以一并在测试时候考虑</a>
+</h3>
+<h3 class="topic">
+<a name="6m8eogdqekjpdracf7f1h91s60">&nbsp;2、测试需要考虑输入重复记录情况，比如创建用户，会出现两个相同的用户吗？</a>
+</h3>
+<h3 class="topic">
+<a name="19fjihi4n2crceei8bfm341d3n">&nbsp;3、满足一定条件的结果集合，比如现在测试情况只有等于的情况，由于测试工具的限制，没有办法测试大于或小于或包含于的情况，需考虑改进测试工具</a>
+</h3>
+<h3 class="topic">
+<a name="0d1njvdhsa635q7ccciupb2vt1">&nbsp;4、需要针对某些特定的值进行边界值测试，比如一个组里面最多有多少个好友等限制</a>
+</h3>
+<h2 class="topic">
+<a name="6abvihdpmtnj3mabja8gbdq155">新建接口</a>
+</h2>
+<h3 class="topic">
+<a name="4cod5f5aq5sv4caf0e20n67n0u">&nbsp;1、提交所有的值（都是长度允许的最大值）都是正常&mdash;&mdash;&mdash;&gt;&gt;成功，可以成功查看添加的数据</a>
+</h3>
+<h3 class="topic">
+<a name="57dp6phshshj56amg9hi7keu07">&nbsp;2、重复提交数据&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h3 class="topic">
+<a name="4iuuqceeflpvpf8rrm5at50ro4">&nbsp;3、将一个参数设定为超过长度范围1位（或者大于允许的最大值+1），其他参数正常&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h3 class="topic">
+<a name="5447tvq838co3ckustk9baf6mf">&nbsp;4、将一个参数值改为不允许的类型或者数字（例如：数字类型填写为字符串，日期类型填写为字符），其他参数正确&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h3 class="topic">
+<a name="5m4g44efpg9d3iin3plke0qtgu">&nbsp;5、必输项有其中一项不填，其他项都填写正常&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h3 class="topic">
+<a name="069dsn6csrrl4cauapi0agvm4h">&nbsp;6、输入值取空值或者空格&mdash;&mdash;&mdash;&gt;&gt;成功/失败，根据接口定义来验证，可以成功查看添加的数据</a>
+</h3>
+<h3 class="topic">
+<a name="2t14cgfui8sfboc5klv83qffm8">&nbsp;7、特殊字段输入判断，比如：参数为空，参数为空格，% &ldquo; &lt;&gt; ? ! @等，或输入正常转义后的字符&mdash;&mdash;&mdash;&gt;&gt;成功/失败，可以成功查看添加的数据</a>
+</h3>
+<h3 class="topic">
+<a name="3kunuo307c8j58mh2utom01g1r">&nbsp;8、正常情况下，非必输项都有输入值，其他项都正常&mdash;&mdash;&mdash;&gt;&gt;成功，可以成功查看添加的数据</a>
+</h3>
+<h3 class="topic">
+<a name="4j7os8su81fqtn5i8uq4il6th3">&nbsp;9、非必输项都没有，其他项输入正常&mdash;&mdash;&mdash;&gt;&gt;成功，可以成功查看添加的数据</a>
+</h3>
+<h3 class="topic">
+<a name="3rhh5m0scbu78dcsd9kkmgqe86">&nbsp;10、正常必输项缺少+非必输项&mdash;&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+<h2 class="topic">
+<a name="46d0mq881isdchh69etq8rdp5v">查询接口</a>
+</h2>
+<h3 class="topic">
+<a name="0bilf720qfun565qcarlfkp5ls">&nbsp;1、查询存在的数据&mdash;&mdash;&mdash;&gt;&gt;成功</a>
+</h3>
+<h3 class="topic">
+<a name="07usrmi9u005dej5rjmdeg2ljs">&nbsp;2、查询不存在的数据则返回&mdash;&mdash;&mdash;&gt;&gt;成功</a>
+</h3>
+<h2 class="topic">
+<a name="7punkqghsk5ib738bj7kuplu24">查询列表接口</a>
+</h2>
+<h3 class="topic">
+<a name="0ceorhe6f4dh71div14c7difco">&nbsp;1、使用单一的精确完整条件查询（例如：使用一个完整的身份证号）逐个查询，则可以查询到存在的数据（需要人工先构造一些存在的数据）</a>
+</h3>
+<h3 class="topic">
+<a name="3rq3hqlp3cn47kgqpfhrqan9dp">&nbsp;2、使用单一的模糊查询条件（例如：使用身份证号的一部分）逐个查询，则可以查询到存在的数据（需要人工先构造一些存在的数据）</a>
+</h3>
+<h3 class="topic">
+<a name="1gdpeh8lm0pdo1cfrcm4dh7nb0">&nbsp;3、使用全部的精确完整条件，可以查询到存在的数据</a>
+</h3>
+<h3 class="topic">
+<a name="5ft2i234ot8p6r1jurerkf2fne">&nbsp;4、使用全部的模糊条件，可以查询到存在的数据</a>
+</h3>
+<h3 class="topic">
+<a name="1iqk5cj4a76ld2cb1tpdojvt6l">&nbsp;5、什么参数都不输入，则查不到任何数据</a>
+</h3>
+<h3 class="topic">
+<a name="0kjpef98ncl09nbupdh8nkk0nf">&nbsp;6、使用空格参数，则查不到任何数据</a>
+</h3>
+<h2 class="topic">
+<a name="3i1qtnokjjmals8agur3p04jad">修改接口</a>
+</h2>
+<h3 class="topic">
+<a name="0eejdrqsi0ocruleup30a86vn3">&nbsp;1、修改存在的userid数据，并且数据合法&mdash;&mdash;&gt;&gt;成功，能够查询到修改后的数据</a>
+</h3>
+<h3 class="topic">
+<a name="3nfcf5gt6ac03j8u029nok293b">&nbsp;2、修改不存在的userid数据&mdash;&mdash;&gt;&gt;失败，应该查询不到刚才提交的数据</a>
+</h3>
+<h3 class="topic">
+<a name="365br23u8dmqbm92pb8qbaqpe1">&nbsp;3、使用新建用例的输入判断数据，进行修改接口的输入判断测试</a>
+</h3>
+<h2 class="topic">
+<a name="3bjj38pa1ntu7vmin5rerhlfts">删除接口</a>
+</h2>
+<h3 class="topic">
+<a name="68ck1mcgcnol1rnb97ljj3upr7">&nbsp;1、删除存在userid数据&mdash;&mdash;&gt;&gt;成功，并且查询不到已经删除的数据</a>
+</h3>
+<h3 class="topic">
+<a name="4to02ors9fdtgmcdre9c1b1d71">&nbsp;2、删除不存在的userid数据&mdash;&mdash;&gt;&gt;失败</a>
+</h3>
+</body>
+</html>
