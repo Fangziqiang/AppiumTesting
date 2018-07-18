@@ -9,7 +9,9 @@ import subprocess
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common import desired_capabilities
 from swipeMethod import swipe_up
-from swipeMethod import get_size
+from swipeMethod import swipe_left
+from swipeMethod import swipe_right
+# from swipeMethod import get_size
 
 class HelloWorld(unittest.TestCase):
         
@@ -18,6 +20,7 @@ class HelloWorld(unittest.TestCase):
         desired_caps['platformName'] = 'Android'
         desired_caps['platformVersion'] = '6.0'
         desired_caps['appPackage'] = 'com.hongxun.ps'
+#         com.tencent.qcloud.timchat.ui.SplashActivity
         desired_caps['appActivity'] = 'com.tencent.qcloud.timchat.ui.SplashActivity'
         desired_caps['deviceName'] = '192.168.61.101:5555'
         #解决无法输入中文
@@ -35,26 +38,33 @@ class HelloWorld(unittest.TestCase):
         
         # 初始化Appium 连接Appium服务器地址
         driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
-        sleep(3)
-        #打印屏幕高和宽
-        print driver.get_window_size()
-        #获取屏幕的高
-        y = driver.get_window_size()['height']
-        #获取屏幕的宽
-        x = driver.get_window_size()['width']
         
-        try:
+        #操作启动页
+        sleep(3)
+        print u"等待3秒"
+        swipe_left(driver,200)
+        print u"第一屏"
+        sleep(1)
+        swipe_left(driver,200)
+        print u"第2屏"
+        sleep(1)
+        swipe_left(driver,200)
+        print u"第3屏"
+        sleep(1)
+        print u"向左滑动页面"
+            
+        try:    
             # 查找取消按钮
             negativeButton = driver.find_element_by_id("com.hongxun.ps:id/md_buttonDefaultNegative")
             negativeButton.click()
             driver.save_screenshot("add_page.png")             
         except:
-            print u"找不到取消按钮"
+            print u"未找到取消按钮，无需登录"
         #向上滑动
         swipe_up(driver,200)
         #锁定及唤醒屏幕
-        driver.lock(5)#5位时间秒
-        driver.keyevent(26)   
+#         driver.lock(5)#5位时间秒
+#         driver.keyevent(26)   
         
         guanjiaButton2 = driver.find_elements_by_class_name("android.widget.TextView")
         #判断标签名称是否为管家
@@ -78,7 +88,7 @@ class HelloWorld(unittest.TestCase):
         
         
         #实现列表滚动查找
-        driver.scroll(origin_el, destination_el)
+#         driver.scroll(origin_el, destination_el)
         
         
         

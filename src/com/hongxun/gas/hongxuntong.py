@@ -16,7 +16,7 @@ class hongxuntong(unittest.TestCase):
         desired_caps['platformVersion'] = '6.0'
         desired_caps['appPackage'] = 'com.jiaxun.management'
         desired_caps['appActivity'] = 'com.tencent.qcloud.timchat.ui.SplashActivity'
-        desired_caps['deviceName'] = '192.168.61.101:5555'
+        desired_caps['deviceName'] = '192.168.10.107:5555'
         #解决无法输入中文
         desired_caps["unicodeKeyboard"] = "True"  
         desired_caps["resetKeyboard"] = "True" 
@@ -44,16 +44,21 @@ class hongxuntong(unittest.TestCase):
             Button2 = driver.find_elements_by_class_name("android.widget.TextView")
             print u"找到确定按钮"
             Button2[2].click()
-            driver.save_screenshot("add_page.png")
+            sleep(2)
+        except:
+            print u"已登录，无需重新输入账号密码"
+#         
+        try:
             #mineButton = driver.find_elements_by_class_name("android.widget.RelativeLayout")
             mineButton = driver.find_elements_by_id("com.jiaxun.management:id/tv_tab_title")
-            mineButton[11].click()
+            mineButton[10].click()
             sleep(3)
-            #清除程序数据
+            print u"清除程序数据"
             driver.reset()
         except:
             #找不到添加按钮
-            print u"找不到添加按钮"
+            driver.reset()
+            print u"找不到我的按钮"
         # 保存一个屏幕截图
         driver.save_screenshot("afterinput.png")
         
