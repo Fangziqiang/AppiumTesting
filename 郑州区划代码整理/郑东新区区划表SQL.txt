@@ -1,0 +1,152 @@
+#郑东新区：410109000000
+#------------龙湖街道办事处----------------------
+insert into app_location(name,id,p_id,type)  values("郑东新区" , "410109000000" , "410100000000" , 3);
+insert into app_location(name,id,p_id,type)  values("龙湖街道办事处" , "410109562000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("花胡庄村委会" , "410109562201" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("魏庄村委会" , "410109562202" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("弓庄村委会" , "410109562203" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("花沟王村委会" , "410109562204" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("小郭村委会" , "410109562205" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("南录庄村委会" , "410109562206" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("花庄村委会" , "410109562207" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("新村村委会" , "410109562208" , "410109562000" , 5);
+insert into app_location(name,id,p_id,type)  values("陈岗村委会" , "410109562209" , "410109562000" , 5);
+#------------杨桥办事处----------------------
+insert into app_location(name,id,p_id,type)  values("杨桥办事处" , "410109570000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("万滩村委会" , "410109570201" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("永定庄村委会" , "410109570202" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("孙庄村委会" , "410109570203" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("娄庄村委会" , "410109570204" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("台肖村委会" , "410109570205" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("杨桥村委会" , "410109570206" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("赵砦村委会" , "410109570207" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("马杨村委会" , "410109570208" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("北周庄村委会" , "410109570209" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("西徐庄村委会" , "410109570210" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("杨庄村委会" , "410109570211" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("彦庄村委会" , "410109570212" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("姚湾村委会" , "410109570213" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("后湾村委会" , "410109570214" , "410109570000" , 5);
+insert into app_location(name,id,p_id,type)  values("后洼村委会" , "410109570215" , "410109570000" , 5);
+#------------圃田乡----------------------
+insert into app_location(name,id,p_id,type)  values("圃田乡" , "410109202000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("圃田村委会" , "410109202201" , "410109202000" , 5);
+insert into app_location(name,id,p_id,type)  values("河沟王村委会" , "410109202211" , "410109202000" , 5);
+insert into app_location(name,id,p_id,type)  values("小孙庄村委会" , "410109202218" , "410109202000" , 5);
+
+#------------金光路办事处----------------------
+insert into app_location(name,id,p_id,type)  values("金光路街道办事处" , "410109564000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("徐庄村委会" , "410109564201" , "410109564000" , 5);
+insert into app_location(name,id,p_id,type)  values("贾陈村委会" , "410109564202" , "410109564000" , 5);
+insert into app_location(name,id,p_id,type)  values("柳园口村委会" , "410109564203" , "410109564000" , 5);
+insert into app_location(name,id,p_id,type)  values("马楼村委会" , "410109564204" , "410109564000" , 5);
+insert into app_location(name,id,p_id,type)  values("刘江村委会" , "410109564205" , "410109564000" , 5);
+
+#------------祭城路办事处----------------------
+insert into app_location(name,id,p_id,type)  values("祭城路街道办事处" , "410109015000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("祭城社区居民委员会" , "410109015001" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("庙张社区居民委员会" , "410109015004" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("金庄社区居民委员会" , "410109015005" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("邢屯社区居民委员会" , "410109015006" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("崔庄社区居民委员会" , "410109015007" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("白庄社区居民委员会" , "410109015008" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("十里铺社区居民委员会" , "410109015009" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("八里庙社区居民委员会" , "410109015010" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("阿卡迪亚社区居民委员会" , "410109015011" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("金龙社区居民委员会" , "410109015012" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("鑫苑花园社区居民委员会" , "410109015013" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("千宁街社区居民委员会" , "410109015014" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("宏图街社区居民委员会" , "410109015015" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("正弘山社区居民委员会" , "410109015016" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("盛世年华社区居民委员会" , "410109015017" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("中南社区居民委员会" , "410109015018" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("祥盛街社区居民委员会" , "410109015019" , "410109015000" , 5);
+insert into app_location(name,id,p_id,type)  values("中兴路社区居民委员会" , "410109015020" , "410109015000" , 5);
+
+#------------龙子湖街道办----------------------
+insert into app_location(name,id,p_id,type)  values("龙子湖街道办事处" , "410109014000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("磨李社区居民委员会" , "410109014001" , "410109014000" , 5);
+insert into app_location(name,id,p_id,type)  values("姚桥社区居民委员会" , "410109014002" , "410109014000" , 5);
+insert into app_location(name,id,p_id,type)  values("夏庄社区居民委员会" , "410109014003" , "410109014000" , 5);
+insert into app_location(name,id,p_id,type)  values("陈三桥社区居民委员会" , "410109014004" , "410109014000" , 5);
+insert into app_location(name,id,p_id,type)  values("时埂社区居民委员会" , "410109014005" , "410109014000" , 5);
+insert into app_location(name,id,p_id,type)  values("薛岗社区居民委员会" , "410109014006" , "410109014000" , 5);
+insert into app_location(name,id,p_id,type)  values("后牛岗社区居民委员会" , "410109014007" , "410109014000" , 5);
+
+#------------白沙镇----------------------
+insert into app_location(name,id,p_id,type)  values("白沙镇" , "410109105000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("白沙村委会" , "410109105201" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("堤刘村委会" , "410109105202" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("大陈村委会" , "410109105203" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("小陈村委会" , "410109105204" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("杜桥村委会" , "410109105205" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("魏庄村委会" , "410109105206" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("龙王庙村委会" , "410109105207" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("李湖桥村委会" , "410109105208" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("白坟村委会" , "410109105209" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("高庄村委会" , "410109105210" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("大有庄村委会" , "410109105212" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("南岗村委会" , "410109105213" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("康庄村委会" , "410109105214" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("大雍村委会" , "410109105215" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("前程村委会" , "410109105216" , "410109105000" , 5);
+insert into app_location(name,id,p_id,type)  values("贺庄村委会" , "410109105225" , "410109105000" , 5);
+
+#------------龙源路办事处----------------------
+insert into app_location(name,id,p_id,type)  values("龙源路街道办事处" , "410109563000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("唐庄村委会" , "410109563201" , "410109563000" , 5);
+insert into app_location(name,id,p_id,type)  values("安庄村委会" , "410109563202" , "410109563000" , 5);
+insert into app_location(name,id,p_id,type)  values("王马庄村委会" , "410109563203" , "410109563000" , 5);
+insert into app_location(name,id,p_id,type)  values("小河村村委会" , "410109563204" , "410109563000" , 5);
+insert into app_location(name,id,p_id,type)  values("黄家门村委会" , "410109563205" , "410109563000" , 5);
+
+#------------如意湖办事处----------------------
+insert into app_location(name,id,p_id,type)  values("如意湖街道办事处" , "410109560000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("如意东路社区居委会" , "410109560001" , "410109560000" , 5);
+insert into app_location(name,id,p_id,type)  values("如意湖社区居民委员会" , "410109560002" , "410109560000" , 5);
+insert into app_location(name,id,p_id,type)  values("绿地社区居民委员会" , "410109560003" , "410109560000" , 5);
+insert into app_location(name,id,p_id,type)  values("天时路社区居民委员会" , "410109560004" , "410109560000" , 5);
+insert into app_location(name,id,p_id,type)  values("绿城百合社区居民委员会" , "410109560005" , "410109560000" , 5);
+insert into app_location(name,id,p_id,type)  values("联盟新城社区居民委员会" , "410109560006" , "410109560000" , 5);
+insert into app_location(name,id,p_id,type)  values("馨悦苑社区居民委员会" , "410109560007" , "410109560000" , 5);
+
+#------------商都路办事处----------------------
+insert into app_location(name,id,p_id,type)  values("商都路街道办事处" , "410109572000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("福禄街社区居民委员会" , "410109572001" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("五州汇富社区居民委员会" , "410109572002" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("南岗社区居民委员会" , "410109572003" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("西刘庄社区居民委员会" , "410109572004" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("榆林社区居民委员会" , "410109572005" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("小店社区居民委员会" , "410109572006" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("普惠社区居民委员会" , "410109572007" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("康宁社区居民委员会" , "410109572008" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("康平社区居民委员会" , "410109572009" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("恒兴嘉园社区居民委员会" , "410109572010" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("白佛村委会" , "410109572201" , "410109572000" , 5);
+insert into app_location(name,id,p_id,type)  values("穆庄村委会" , "410109572202" , "410109572000" , 5);
+
+#------------博学路办事处----------------------
+insert into app_location(name,id,p_id,type)  values("博学路街道办事处" , "410109561000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("贾岗社区居民委员会" , "410109561001" , "410109561000" , 5);
+
+#------------豫兴路办事处----------------------
+insert into app_location(name,id,p_id,type)  values("豫兴办事处" , "410109571000" , "410109000000" , 4);
+insert into app_location(name,id,p_id,type)  values("长白村委会" , "410109571201" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("后梁村委会" , "410109571202" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("岗吴村委会" , "410109571203" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("朱庄村委会" , "410109571204" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("岗赵村委会" , "410109571205" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("刘集村委会" , "410109571206" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("小冉庄村委会" , "410109571207" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("马仙李村委会" , "410109571208" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("王庄村委会" , "410109571209" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("大吴村委会" , "410109571210" , "410109571000" , 5);
+insert into app_location(name,id,p_id,type)  values("岗李村委会" , "410109571211" , "410109571000" , 5);
+
+
+
+
+
+
+
+
