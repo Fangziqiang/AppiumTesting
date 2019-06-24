@@ -14,6 +14,8 @@ class HelloWorld(unittest.TestCase):
         desired_caps['appPackage'] = 'com.nearme.note'
         desired_caps['appActivity'] = '.view.AllNoteActivity'
         desired_caps['deviceName'] = 'ba36aa7a'
+        #设置每次启动不清除程序原始数据
+        desired_caps['noReset'] = 'True'
         pass
         
         # 初始化Appium 连接
