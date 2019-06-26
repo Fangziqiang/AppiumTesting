@@ -1,0 +1,15 @@
+参考网址：
+https://www.cnblogs.com/fnng/p/4540731.html
+
+
+一、安装node.js 。node.js官方网站：https://nodejs.org/
+安装完成，打开Windows 命令提示符，敲入“npm”命令测试是否安装成功。
+
+二、安装Appium
+Appium官方网站：http://appium.io/
+下载安装包进行安装
+
+三、安装python-client
+pip install Appium-Python-Client
+
+
