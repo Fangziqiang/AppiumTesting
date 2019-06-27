@@ -10,17 +10,25 @@ class HelloWorld(unittest.TestCase):
     def test_addContact(self):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '5.1.1'
-#         便签
-#         desired_caps['appPackage'] = 'com.nearme.note'
-#         desired_caps['appActivity'] = '.view.AllNoteActivity'
+#       夜神模拟器
+#       desired_caps['deviceName'] = '127.0.0.1:62001'
+#       desired_caps['platformVersion'] = '5.1.1'
+
+#       OPPO R9s
+#       desired_caps['platformVersion'] = '7.1.1'
+#       desired_caps['deviceName'] = 'ba36aa7a'
+
+#       小米 MIX2
+        desired_caps['platformVersion'] = '8.0.0'
+        desired_caps['deviceName'] ='e82b5f9d'
         
-#        微信
+#       便签
+#       desired_caps['appPackage'] = 'com.nearme.note'
+#       desired_caps['appActivity'] = '.view.AllNoteActivity'
+#       微信
         desired_caps['appPackage'] = 'com.tencent.mm'
         desired_caps['appActivity'] = '.ui.LauncherUI'
-#       夜神模拟器
-        desired_caps['deviceName'] = '127.0.0.1:62001'
-#       desired_caps['deviceName'] = 'ba36aa7a'
+
         #设置每次启动不清除程序原始数据
         desired_caps['noReset'] = 'True'
         pass
@@ -32,7 +40,7 @@ class HelloWorld(unittest.TestCase):
         LoginButton = None
         try:
             # 如果手机没有联系人，则通过create_contact_button 来创建。此处通过控件id 来查找
-            LoginButton = driver.find_element_by_id("com.android.contacts:id/create_contact_button")
+            LoginButton = driver.find_element_by_id("com.tencent.mm:id/b6e")
         except:
             # 否则通过底部的添加联系人菜单来添加
             LoginButton = driver.find_element_by_id("com.android.contacts:id/menu_add_contact")
@@ -47,7 +55,7 @@ class HelloWorld(unittest.TestCase):
         try:
             dialog = driver.find_element_by_id("android:id/content")
             # 找到“本地保存”按钮并点击
-            saveLocal = driver.find_element_by_id("com.android.contacts:id/left_button")
+            saveLocal = driver.find_element_by_id("com.tencent.mm:id/b6e")
             saveLocal.click()
             sleep(2)
         except:
