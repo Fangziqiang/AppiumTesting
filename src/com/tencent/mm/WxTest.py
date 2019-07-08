@@ -37,33 +37,22 @@ class HelloWorld(unittest.TestCase):
         driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
         
         # 查找登录按钮
-        LoginButton = None
+        list = None
         try:
+            sleep(2)
             # 如果手机没有联系人，则通过create_contact_button 来创建。此处通过控件id 来查找
-            LoginButton = driver.find_element_by_id("com.tencent.mm:id/b6e")
+            list = driver.find_elements_by_id("com.tencent.mm:id/b6c")
+            print(len(list))
         except:
             # 否则通过底部的添加联系人菜单来添加
-            LoginButton = driver.find_element_by_id("com.android.contacts:id/menu_add_contact")
             # 单击创建按钮
-            LoginButton.click()
+            print("找不到列表可点击项")
         
         # 稍等下，手机响应需要一点时间
         # 此处固定等待两秒方法不可取，由于不同的手机响应速度不同，脚本可能会失败
         # 此处仅是为了示例，在后面章节中会有更合理的等待方法
         sleep(2)
         # 查看Dialog 的显示是否显示
-        try:
-            dialog = driver.find_element_by_id("android:id/content")
-            # 找到“本地保存”按钮并点击
-            saveLocal = driver.find_element_by_id("com.tencent.mm:id/b6e")
-            saveLocal.click()
-            sleep(2)
-        except:
-            # 如果找不到Dialog 或者button, 就会跳转到这里
-            print("no dialog found")
-        
-        sleep(2)
-        
         
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(HelloWorld)
