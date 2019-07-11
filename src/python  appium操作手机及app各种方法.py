@@ -62,3 +62,38 @@ driver.pull_file('Library/xxx/xxx.plist')
 data = "test is good"
 path = "/data/local/tmp/test.txt"
 driver.push_file(path, data.encode('base64'))
+
+# appium扩展提供了pressKeyCode()方法。该方法Android特有。
+
+# 方法：pressKeyCode()
+# 发送一个键码的操作。需要一个入参。
+driver.pressKeyCode(29); 
+电话键
+
+KEYCODE_CALL 拨号键 5
+
+KEYCODE_ENDCALL 挂机键 6
+
+KEYCODE_HOME 按键Home 3
+
+KEYCODE_MENU 菜单键 82
+
+KEYCODE_BACK 返回键 4
+
+KEYCODE_SEARCH 搜索键 84
+
+KEYCODE_CAMERA 拍照键 27
+
+KEYCODE_FOCUS 拍照对焦键 80
+
+KEYCODE_POWER 电源键 26
+
+KEYCODE_NOTIFICATION 通知键 83
+
+KEYCODE_MUTE 话筒静音键 91
+
+KEYCODE_VOLUME_MUTE 扬声器静音键 164
+
+KEYCODE_VOLUME_UP 音量增加键 24
+
+KEYCODE_VOLUME_DOWN 音量减小键 25

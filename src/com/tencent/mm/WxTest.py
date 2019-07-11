@@ -4,9 +4,22 @@ import os
 import unittest
 from time import sleep
 from appium import webdriver
-
+import subprocess
+from swipeMethod import swipe_up
+from swipeMethod import swipe_left
+from swipeMethod import swipe_right
 
 class HelloWorld(unittest.TestCase):
+    def get_size(self):
+        x = self.get_window_size()['width']
+        y = self.get_window_size()['height']
+        return(x,y)
+    
+#     def swipe_left(self,t):
+#         screen = get_size(self)
+#         self.swipe(screen[0]*0.75,screen[1]*0.5,screen[0]*0.25,screen[1]*0.5,t)
+        
+        
     def test_addContact(self):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
@@ -38,21 +51,28 @@ class HelloWorld(unittest.TestCase):
         
         # 查找登录按钮
         list = None
-        try:
-            sleep(2)
+#         try:
+        sleep(2)
             # 如果手机没有联系人，则通过create_contact_button 来创建。此处通过控件id 来查找
-            list = driver.find_elements_by_id("com.tencent.mm:id/b6c")
-            print(len(list))
-        except:
+        list = driver.find_elements_by_id("com.tencent.mm:id/b93")
+        print(len(list))
+        for i in range(len(list)):
+            list[i].click()
+#           返回
+            driver.keyevent(4)
+            sleep(1)
+#             swipe_left(driver,200)
+            
+#         except:
             # 否则通过底部的添加联系人菜单来添加
             # 单击创建按钮
-            print("找不到列表可点击项")
+#         print("找不到列表可点击项")
         
         # 稍等下，手机响应需要一点时间
         # 此处固定等待两秒方法不可取，由于不同的手机响应速度不同，脚本可能会失败
         # 此处仅是为了示例，在后面章节中会有更合理的等待方法
         sleep(2)
-        # 查看Dialog 的显示是否显示
+    
         
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(HelloWorld)
