@@ -1,15 +1,13 @@
-²Î¿¼ÍøÖ·£º
+å‚è€ƒç½‘å€ï¼š
 https://www.cnblogs.com/fnng/p/4540731.html
 
 
-Ò»¡¢°²×°node.js ¡£node.js¹Ù·½ÍøÕ¾£ºhttps://nodejs.org/
-°²×°Íê³É£¬´ò¿ªWindows ÃüÁîÌáÊ¾·û£¬ÇÃÈë¡°npm¡±ÃüÁî²âÊÔÊÇ·ñ°²×°³É¹¦¡£
+ä¸€ã€å®‰è£…node.js ã€‚node.jså®˜æ–¹ç½‘ç«™ï¼šhttps://nodejs.org/
+å®‰è£…å®Œæˆï¼Œæ‰“å¼€Windows å‘½ä»¤æç¤ºç¬¦ï¼Œæ•²å…¥â€œnpmâ€å‘½ä»¤æµ‹è¯•æ˜¯å¦å®‰è£…æˆåŠŸã€‚
 
-¶ş¡¢°²×°Appium
-Appium¹Ù·½ÍøÕ¾£ºhttp://appium.io/
-ÏÂÔØ°²×°°ü½øĞĞ°²×°
+äºŒã€å®‰è£…Appium
+Appiumå®˜æ–¹ç½‘ç«™ï¼šhttp://appium.io/
+ä¸‹è½½å®‰è£…åŒ…è¿›è¡Œå®‰è£…
 
-Èı¡¢°²×°python-client
+ä¸‰ã€å®‰è£…python-client
 pip install Appium-Python-Client
-
-
