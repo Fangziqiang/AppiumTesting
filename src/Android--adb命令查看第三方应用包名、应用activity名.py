@@ -11,6 +11,8 @@ adb shell am start -n com.android.fcc.espressif/com.android.fcc_app.MainActivity
 
 补充：使用adb shell dumpsys window | findstr mCurrentFocus  命令查看当前运行的包名和Activity更清晰一些。
 
+com.tencent.mm/com.tencent.mm.plugin.appbrand.ui.AppBrandUI
+
 二 、从电脑端向手机复制文件
 
 输入: adb pull 电脑路径  手机存储路径  
