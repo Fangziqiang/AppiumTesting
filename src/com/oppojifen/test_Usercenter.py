@@ -36,6 +36,7 @@ class testUsercenter(unittest.TestCase):
         is_signed = signinButton.text
         if signinButton.is_enabled():
             signinButton.click()
+            self.driver.switch_to.alert.accept()
         #签到成功弹窗
 #       text = self.driver.find_element_by_id("com.oppo.usercenter:id/get_btn").text
 #       print(text)
@@ -47,8 +48,8 @@ class testUsercenter(unittest.TestCase):
 #         self.assertIn("Web Browser Automation",text)
 
     #   添加teardown进行善后处理
-#     def tearDown(self):
-#         self.driver.quit()
+    def tearDown(self):
+        self.driver.quit()
 
 #   添加测试集合
 suit = unittest.TestSuite()
