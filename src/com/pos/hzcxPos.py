@@ -35,13 +35,15 @@ class testUsercenter(unittest.TestCase):
         desired_caps['appActivity'] = 'com.hzcx.hzcxpospal.ui.actvity.NewShouYinActivity'
 
         #设置每次启动不清除程序原始数据
-        desired_caps['noReset'] = 'True'
+#         desired_caps['noReset'] = 'True'
+        
         pass
         # 初始化Appium 连接
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 
     #   测试用例使用test开头
-    def login(self,username,password):
+    def test(self):
+        sleep(2)
         usernameBtn = self.driver.find_element_by_id("com.hzcx.hzcxpospal:id/et_zhanghu")
         usernameBtn.send_keys("17610831883")
         passwordBtn = self.driver.find_element_by_id("com.hzcx.hzcxpospal:id/et_pwd")
@@ -51,8 +53,8 @@ class testUsercenter(unittest.TestCase):
         #签到成功弹窗
 #       text = self.driver.find_element_by_id("com.oppo.usercenter:id/get_btn").text
 #       print(text)
-        else:
-            print(is_signed)
+#         else:
+#             print(is_signed)
        
 
         #   断言判断文本是否存在于页面中
@@ -64,7 +66,7 @@ class testUsercenter(unittest.TestCase):
 
 #   添加测试集合
 suit = unittest.TestSuite()
-suit.addTest(testUsercenter("getintegral"))
+suit.addTest(testUsercenter("test"))
 
 if __name__ == '__main__':
     #  使用main()方法进行运行用例
