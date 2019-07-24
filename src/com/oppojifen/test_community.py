@@ -46,7 +46,7 @@ class testCommunity(unittest.TestCase):
         print(is_signed)
         if signinButton.is_enabled():
             signinButton.click()
-            self.driver.switch_to_alert().accept()
+            self.driver.switch_to.alert().accept()
         #签到成功弹窗
 #       text = self.driver.find_element_by_id("com.oppo.usercenter:id/get_btn").text
 #       print(text)

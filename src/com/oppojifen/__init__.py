@@ -4,7 +4,7 @@
 #oppo+
 #2、  com.oppo.community/com.oppo.community.MainActivity
 #3、主题商店com.nearme.themespace/com.nearme.themespace.activities.ThemeMainActivity
-#4、 com.oppo.market/a.a.a.agk
+#4、com.oppo.market/com.oppo.market.activity.MainActivity
 #5、 com.oppo.market/a.a.a.agk}
 #6、 com.nearme.gamecenter/a.a.a.avi
 #7、 com.coloros.bbs/com.coloros.bbs.modules.main.BBSMainActivty}
