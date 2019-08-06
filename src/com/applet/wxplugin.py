@@ -30,7 +30,7 @@ class testUsercenter(unittest.TestCase):
         pass
         # 初始化Appium 连接
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
-        
+#         self.driver.find_element_by_android_uiautomator('text("微信")').click() #点击微信Tab
         
     #   测试用例使用test开头
     def getintegral(self):
@@ -68,6 +68,7 @@ class testUsercenter(unittest.TestCase):
 #         self.assertIn("Web Browser Automation",text)
 
     #   添加teardown进行善后处理
+    def addOrU
     def tearDown(self):
         self.driver.quit()
 
