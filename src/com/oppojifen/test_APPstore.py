@@ -29,6 +29,7 @@ class testAPPstore(unittest.TestCase):
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 
     #   测试用例使用test开头
+    @unittest.skip("ceshi")
     def test_getintegral(self):
         sleep(5)
         meButon = self.driver.find_element_by_android_uiautomator ("text(\"我的\")")
@@ -40,7 +41,7 @@ class testAPPstore(unittest.TestCase):
         print(is_signed)
         if signinButton.is_enabled():
             signinButton.click()
-            self.driver.switch_to.alert().accept()
+#             self.driver.switch_to.alert().accept()
         #签到成功弹窗
 #       text = self.driver.find_element_by_id("com.oppo.usercenter:id/get_btn").text
 #       print(text)

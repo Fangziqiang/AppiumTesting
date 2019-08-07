@@ -29,14 +29,14 @@ class testUsercenter(unittest.TestCase):
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 
     #   测试用例使用test开头
-    def getintegral(self):
+    def test_getintegral(self):
         signin = self.driver.find_element_by_id("com.oppo.usercenter:id/cb_sign_in")
         signin.click()
         signinButton = self.driver.find_element_by_id("com.oppo.usercenter:id/sign_btn")
         is_signed = signinButton.text
         if signinButton.is_enabled():
             signinButton.click()
-            self.driver.switch_to.alert.accept()
+#             self.driver.switch_to.alert.accept()
         #签到成功弹窗
 #       text = self.driver.find_element_by_id("com.oppo.usercenter:id/get_btn").text
 #       print(text)
@@ -53,7 +53,7 @@ class testUsercenter(unittest.TestCase):
 
 #   添加测试集合
 suit = unittest.TestSuite()
-suit.addTest(testUsercenter("getintegral"))
+suit.addTest(testUsercenter("test_getintegral"))
 
 if __name__ == '__main__':
     #  使用main()方法进行运行用例

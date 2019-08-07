@@ -29,7 +29,7 @@ class testAPPstore(unittest.TestCase):
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 
     #   测试用例使用test开头
-    def getintegral(self):
+    def test_getintegral(self):
         sleep(5)
         meButon = self.driver.find_element_by_android_uiautomator ("text(\"我的\")")
         meButon.click()
@@ -56,7 +56,7 @@ class testAPPstore(unittest.TestCase):
 
 #   添加测试集合
 suit = unittest.TestSuite()
-suit.addTest(testAPPstore("getintegral"))
+suit.addTest(testAPPstore("test_getintegral"))
 
 if __name__ == '__main__':
     #  使用main()方法进行运行用例

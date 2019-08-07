@@ -29,7 +29,7 @@ class testTheme(unittest.TestCase):
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 
     #   测试用例使用test开头
-    def getintegral(self):
+    def test_getintegral(self):
         signin = self.driver.find_element_by_id("com.oppo.community:id/sign_cb")
         signin.click()
         signinButton = self.driver.find_element_by_id("com.oppo.community:id/sign_btn")
@@ -54,7 +54,7 @@ class testTheme(unittest.TestCase):
 
 #   添加测试集合
 suit = unittest.TestSuite()
-suit.addTest(testTheme("getintegral"))
+suit.addTest(testTheme("test_getintegral"))
 
 if __name__ == '__main__':
     #  使用main()方法进行运行用例
