@@ -8,6 +8,7 @@ import subprocess
 from swipeMethod import swipe_up
 from swipeMethod import swipe_left
 from swipeMethod import swipe_right
+from compiler.pycodegen import TRY_FINALLY
 
 
 class testAPPstore(unittest.TestCase):
@@ -29,7 +30,7 @@ class testAPPstore(unittest.TestCase):
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 
     #   测试用例使用test开头
-    @unittest.skip("ceshi")
+#     @unittest.skip("ceshi")
     def test_getintegral(self):
         sleep(5)
         meButon = self.driver.find_element_by_android_uiautomator ("text(\"我的\")")

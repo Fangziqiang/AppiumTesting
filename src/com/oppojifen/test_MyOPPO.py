@@ -8,7 +8,9 @@ import subprocess
 from swipeMethod import swipe_up
 from swipeMethod import swipe_left
 from swipeMethod import swipe_right
+from _ast import TryExcept
 
+# https://cloud.tencent.com/developer/article/1467203  安装定位工具
 
 class testUsercenter(unittest.TestCase):
     # 添加setup进行初始化工作
@@ -18,7 +20,7 @@ class testUsercenter(unittest.TestCase):
 #         OPPO R9s
         desired_caps['platformVersion'] = '7.1.1'
         desired_caps['deviceName'] = 'ba36aa7a'
-#       微信
+
         desired_caps['appPackage'] = 'com.oppo.usercenter'
         desired_caps['appActivity'] = 'com.oppo.usercenter.vip.UCVIPMainActivity'
 
@@ -30,6 +32,9 @@ class testUsercenter(unittest.TestCase):
 
     #   测试用例使用test开头
     def test_getintegral(self):
+        #隐式等待10s
+        self.driver.implicitly_wait(10)
+        
         signin = self.driver.find_element_by_id("com.oppo.usercenter:id/cb_sign_in")
         signin.click()
         signinButton = self.driver.find_element_by_id("com.oppo.usercenter:id/sign_btn")
