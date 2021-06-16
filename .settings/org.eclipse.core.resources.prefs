@@ -1,7 +1,18 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 encoding//src/com/oppojifen/run_all_case.py=utf-8
 encoding//src/com/oppojifen/test_APPstore.py=utf-8
 encoding//src/com/oppojifen/test_Theme.py=utf-8
 encoding//src/com/oppojifen/test_Usercenter.py=utf-8
 encoding//src/com/oppojifen/test_community.py=utf-8
 encoding//src/\u667A\u80FD\u7B49\u5F85/waitDemo.py=utf8
+=======
+encoding//src/appium_demo/test.py=utf-8
+encoding//src/com/oppojifen/run_all_case.py=utf-8
+encoding//src/com/oppojifen/test_APPstore.py=utf-8
+encoding//src/com/oppojifen/test_Game.py=utf-8
+encoding//src/com/oppojifen/test_MyOPPO.py=utf-8
+encoding//src/com/oppojifen/test_community.py=utf-8
+encoding//src/com/oppojifen/test_qq.py=UTF-8
+encoding//src/com/oppojifen/\u5907\u6CE8=UTF-8
+>>>>>>> a6ab878977fedb75f0b20164b05ee2c95514714b

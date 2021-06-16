@@ -8,10 +8,14 @@ import subprocess
 from swipeMethod import swipe_up
 from swipeMethod import swipe_left
 from swipeMethod import swipe_right
+<<<<<<< HEAD
 from selenium.common.exceptions import  NoSuchElementException,WebDriverException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
+=======
+from compiler.pycodegen import TRY_FINALLY
+>>>>>>> a6ab878977fedb75f0b20164b05ee2c95514714b
 
 
 class testAPPstore(unittest.TestCase):
