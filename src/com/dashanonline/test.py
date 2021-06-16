@@ -12,7 +12,7 @@ caps["appPackage"] = "com.me.fzw.dashanonline"
 caps["appActivity"] = "com.me.fzw.dashanonline.activity.GuidePageActivity"
 caps["noReset"] = "True"
 
-driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
+driver = webdriver.Remote("http://192.168.1.186:4723/wd/hub", caps)
 
 #el1 = driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ListView/android.widget.RelativeLayout/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.ImageView")
 try:
@@ -29,9 +29,9 @@ except:
 courseButton = driver.find_element_by_xpath('//*[@resource-id="com.me.fzw.dashanonline:id/rv_quick_access"]/android.widget.LinearLayout[2]/android.widget.ImageView[1]')
 courseButton.click()
 try:
-	bk_detail[0] = driver.find_element_by_id("com.me.fzw.dashanonline:id/rl_content")
-	bk_detail.click()
+	bk_detail = driver.find_element_by_id("com.me.fzw.dashanonline:id/rl_content")
+	bk_detail[0].click()
 except:
-	print (u"没有弹窗")
-#driver.close()
+	print (u"控件定位失败")
+driver.close()
 
