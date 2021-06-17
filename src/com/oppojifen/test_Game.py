@@ -16,8 +16,10 @@ class testAPPstore(unittest.TestCase):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
 #         OPPO R9s
-        desired_caps['platformVersion'] = '7.1.1'
-        desired_caps['deviceName'] = 'ba36aa7a'
+        #desired_caps['platformVersion'] = '7.1.1'
+        #desired_caps['deviceName'] = 'ba36aa7a'
+        desired_caps['platformVersion'] = '11'
+        desired_caps['deviceName'] = '763d6ade'
 #       软件商店
         desired_caps['appPackage'] = 'com.nearme.gamecenter'
         desired_caps['appActivity'] = 'com.nearme.gamecenter.ui.activity.SplashActivity'

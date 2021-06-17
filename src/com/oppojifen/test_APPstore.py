@@ -8,14 +8,10 @@ import subprocess
 from swipeMethod import swipe_up
 from swipeMethod import swipe_left
 from swipeMethod import swipe_right
-<<<<<<< HEAD
 from selenium.common.exceptions import  NoSuchElementException,WebDriverException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
-=======
-from compiler.pycodegen import TRY_FINALLY
->>>>>>> a6ab878977fedb75f0b20164b05ee2c95514714b
 
 
 class testAPPstore(unittest.TestCase):
@@ -43,7 +39,7 @@ class testAPPstore(unittest.TestCase):
     def test_getintegral(self):
         self.driver.implicitly_wait(10)
         try:
-        #sleep(5)
+            sleep(5)
             meButon = self.driver.find_element_by_xpath('//*[@resource-id="com.heytap.market:id/navi_menu_tab"]/android.view.ViewGroup[1]/android.widget.FrameLayout[5]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]')
             meButon.click()
         except NoSuchElementException:
