@@ -14,6 +14,7 @@ from swipeMethod import swipe_right
 class testUsercenter(unittest.TestCase):
     # 添加setup进行初始化工作
     def setUp(self):
+        
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
 #         OPPO R9s
@@ -35,8 +36,9 @@ class testUsercenter(unittest.TestCase):
     def test_getintegral(self):
         try:
             self.driver.implicitly_wait(10)
-            signin = self.driver.find_element_by_xpath('//*[@text="已签"]')
+            signin = self.driver.find_element_by_xpath('//*[@text="签到"]')
             signin.click()
+            sleep(3)
             print("签到成功")
             #self.driver.switch_to.alert.accept()
         except:
